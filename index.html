@@ -142,18 +142,21 @@
 
 
         <div>
-            <div class="flex py-10  justify-between">
+            <div class="flex flex-col lg:flex-row lg:py-10  lg:justify-between pb-10">
                 <!-- deal of the day -->
                 <div class="">
-                    <h3 class=" text-gray-950 text-5xl font-extrabold lg:mr-24  ">Deal of the day</h3>
-                    <p class="py-6 text-[#12121299]">Contrary to popular belief, is not simply random text.
+                    <h3
+                        class=" text-gray-950 text-lg lg:text-5xl font-extrabold lg:mr-24 justify-center lg:justify-start ">
+                        Deal of
+                        the day</h3>
+                    <p class="py-6 text-[#12121299] text-xs">Contrary to popular belief, is not simply random text.
                         It has roots in a piece
-                        of classical<br> Latin
+                        of classical Latin
                         literature from 45 BC, making it over 2000 years old.</p>
                 </div>
                 <!-- timer -->
-                <div>
-                    <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                <div class="sm:justify-center ">
+                    <div class="grid grid-flow-col gap-5 text-center ">
                         <div class="flex flex-col">
                             <span class="countdown font-mono text-5xl">
                                 <span class="font-extrabold " style="--value:23;"></span>
@@ -223,8 +226,30 @@
                                 <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                             </div>
-                            <div class="card-actions py-4">
-                                <button class=" text-orange-700 ">Details</button>
+                            <div class="card-actions py-4" <!-- Open the modal using ID.showModal() method -->
+                                <button class=" text-orange-700 " onclick="my_modal_1.showModal()">Details</button>
+                                <dialog id="my_modal_1" class="modal">
+                                    <form method="dialog" class="modal-box">
+                                        <div class="card ">
+                                            <figure class="px-10 pt-10">
+                                                <img src="./images/fruit7.png" alt="Shoes" class="rounded-xl" />
+                                            </figure>
+                                            <div class="card-body items-center text-center">
+                                                <h2 class="card-title">Shoes!</h2>
+                                                <p>If a dog chews shoes whose shoes does he choose?</p>
+
+                                            </div>
+                                        </div>
+                                        <div class="modal-action justify-center">
+                                            <button class="btn">Close</button>
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <div class="card-actions">
+                                                <button class="btn bg-[#F85559]">Buy Now</button>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </dialog>
                             </div>
                         </div>
                     </div>
@@ -299,6 +324,11 @@
                     </div>
                 </div>
             </div>
+
+        </div>
+        <div class=" mt-7 mb-40  h-full text-center border-gray-950 "><button
+                class=" btn text-white  bg-[#F85559] ">Shop
+                All</button>
         </div>
 
 
